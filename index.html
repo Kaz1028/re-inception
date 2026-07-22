@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="canonical" href="https://re-inception.com/">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2894543346438493"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>株式会社INCEPTION｜京都府城陽市の不動産</title>
+<meta name="description" content="京都府城陽市の不動産会社、株式会社INCEPTION。地域密着型で土地、新築・中古戸建、マンションの売買・賃貸仲介を全力サポートします。最新エリア情報も無料提供中。">
+<meta name="keywords" content="城陽市, 不動産, 売買, 賃貸, INCEPTION, インセプション">
+<meta property="og:title" content="株式会社INCEPTION｜京都府城陽市の不動産">
+<meta property="og:description" content="城陽市を中心とした不動産の売買・賃貸は株式会社INCEPTIONにお任せください。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://re-inception.com/">
+<meta property="og:site_name" content="株式会社INCEPTION">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A96E;
+    --gold-light: #E8D5A3;
+    --gold-dark: #8B6914;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #242424;
+    --white: #F5F0E8;
+    --gray: #888;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+  }
+
+  .logo span {
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--gold-light);
+    margin-top: 2px;
+  }
+
+  .tel-badge {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 400;
+    padding: 6px 12px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .tel-badge .tel-label { font-size: 8px; letter-spacing: 0.1em; }
+
+  /* ── HERO ── */
+  .hero {
+    height: 100svh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px 28px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(160deg, rgba(201,169,110,0.08) 0%, transparent 50%),
+      linear-gradient(to bottom, transparent 30%, rgba(10,10,10,0.9) 80%, var(--black) 100%);
+    z-index: 1;
+  }
+
+  .hero-split-image {
+    display: none;
+  }
+
+  .hero-img-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .hero-accent {
+    position: absolute;
+    top: 15%;
+    right: -20px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(201,169,110,0.2);
+    border-radius: 50%;
+  }
+
+  .hero-accent2 {
+    position: absolute;
+    top: 12%;
+    right: -40px;
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgba(201,169,110,0.08);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 4;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-desc {
+    font-size: 12px;
+    color: rgba(245,240,232,0.6);
+    line-height: 2;
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    flex: 1;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-primary:active { transform: scale(0.97); }
+
+  .btn-secondary {
+    padding: 14px 20px;
+    border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold);
+    background: transparent;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 72px 28px; }
+
+  .section-header {
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .section-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .section-en::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(201,169,110,0.4), transparent);
+  }
+
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+
+  /* ── NEWS ── */
+  .news-section { background: var(--dark); }
+
+  .news-list { display: flex; flex-direction: column; gap: 1px; }
+
+  .news-item {
+    background: var(--dark2);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(201,169,110,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: fadeUp 0.6s ease both;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .news-item:active { background: var(--dark3); }
+
+  .news-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+  }
+
+  .news-text {
+    font-size: 13px;
+    color: rgba(245,240,232,0.8);
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── SERVICES ── */
+  .services-section { background: var(--black); }
+
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 4px;
+    animation: fadeUp 0.6s ease both;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .service-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+    z-index: 2;
+    transition: background 0.4s;
+  }
+
+  .service-card:hover .service-card-bg {
+    transform: scale(1.05);
+  }
+
+  .service-content {
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .service-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .service-name::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: rgba(245,240,232,0.8);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── REPORT ── */
+  .report-section { background: var(--dark); padding: 80px 28px; }
+
+  .report-card {
+    border: 1px solid rgba(255,255,255,0.05);
+    background-image: url('images/report_section_bg_1773340672140.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 48px 32px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.8s ease both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 480px;
+  }
+
+  .report-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.2) 100%);
+    z-index: 1;
+  }
+
+  .report-content {
+    position: relative;
+    z-index: 2;
+    max-width: 440px;
+  }
+
+  .report-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    padding: 6px 12px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .report-title {
+    color: var(--white);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+
+  .report-desc {
+    font-size: 14px;
+    color: rgba(245,240,232,0.8);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+  }
+
+  .btn-gold-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 20px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .btn-gold-outline:active {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  /* ── ABOUT ── */
+  .about-section { background: var(--black); }
+
+  .about-content {
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .about-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.2;
+    letter-spacing: 0.06em;
+    color: rgba(245,240,232,0.75);
+    margin-bottom: 32px;
+  }
+
+  .about-info {
+    border-top: 1px solid rgba(201,169,110,0.2);
+    padding-top: 28px;
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(245,240,232,0.06);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .info-label {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .info-value {
+    color: rgba(245,240,232,0.7);
+    line-height: 1.7;
+  }
+
+  /* ── USEFUL ── */
+  .useful-section { background: var(--dark); padding: 80px 28px; }
+
+  .useful-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .useful-item {
+    position: relative;
+    display: block;
+    height: 140px;
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.05);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .useful-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+  }
+
+  .useful-item:hover .useful-bg {
+    transform: scale(1.05);
+  }
+
+  .useful-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 60%, transparent 100%);
+    z-index: 2;
+  }
+
+  .useful-content {
+    position: relative;
+    z-index: 3;
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .useful-sub {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .useful-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .useful-arrow {
+    color: var(--gold-light);
+    font-size: 14px;
+    transition: transform 0.3s;
+  }
+
+  .useful-item:hover .useful-arrow {
+    transform: translateX(4px);
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: linear-gradient(135deg, var(--dark2) 0%, var(--black) 100%);
+    border-top: 1px solid rgba(201,169,110,0.15);
+    text-align: center;
+  }
+
+  .contact-section .section-header {
+    text-align: center;
+  }
+
+  .contact-section .section-en {
+    justify-content: center;
+  }
+
+  .contact-section .section-en::after { display: none; }
+
+  .contact-tel {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  .contact-hours {
+    font-size: 11px;
+    color: rgba(245,240,232,0.45);
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .contact-btn {
+    display: block;
+    background: var(--gold);
+    color: var(--black);
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: opacity 0.2s;
+  }
+
+  .contact-btn:active { opacity: 0.85; }
+
+  .contact-btn-outline {
+    display: block;
+    border: 1px solid rgba(201,169,110,0.35);
+    color: var(--gold);
+    padding: 16px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .contact-btn-outline:active {
+    background: rgba(201,169,110,0.08);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(201,169,110,0.1);
+    padding: 40px 28px 32px;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 4px;
+  }
+
+  .footer-tagline {
+    font-size: 10px;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.15em;
+    margin-bottom: 28px;
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .footer-nav a {
+    font-size: 11px;
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(245,240,232,0.06);
+    transition: color 0.2s;
+  }
+
+  .footer-nav a:active { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 9px;
+    color: rgba(245,240,232,0.2);
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245,240,232,0.06);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .gold-shimmer {
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Delay utilities */
+  .d1 { transition-delay: 0.1s; }
+  .d2 { transition-delay: 0.2s; }
+  .d3 { transition-delay: 0.3s; }
+  .d4 { transition-delay: 0.4s; }
+
+  /* ── NAV BOTTOM ── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(201,169,110,0.12);
+    display: flex;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 4px;
+    text-decoration: none;
+    gap: 4px;
+    transition: opacity 0.2s;
+  }
+
+  .nav-item:active { opacity: 0.7; }
+
+  .nav-icon { font-size: 18px; }
+
+  .nav-label {
+    font-size: 9px;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 0.08em;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .nav-item.active .nav-icon { filter: drop-shadow(0 0 6px var(--gold)); }
+  .nav-item.active .nav-label { color: var(--gold); }
+
+  /* Spacer for bottom nav */
+  .bottom-spacer { height: 72px; }
+
+  /* ── DECORATIVE ELEMENTS ── */
+  .gold-line {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 16px 0;
+  }
+
+  .number-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: rgba(201,169,110,0.08);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .athome-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    border: 1px solid rgba(201,169,110,0.15);
+    background: var(--dark2);
+    font-size: 11px;
+    color: rgba(245,240,232,0.5);
+    letter-spacing: 0.06em;
+  }
+
+  .athome-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── MEDIA QUERIES (PC & TABLET) ── */
+  @media (min-width: 768px) {
+    header {
+      padding: 24px 8%;
+    }
+    .logo { font-size: 26px; }
+    .logo span { font-size: 11px; }
+    .tel-badge {
+      padding: 10px 20px;
+      font-size: 14px;
+      flex-direction: row;
+      gap: 12px;
+    }
+    .tel-badge .tel-label { font-size: 10px; }
+
+    section { padding: 100px 8%; }
+    .section-header, .news-list, .service-cards, .report-card, .useful-list, .about-content, .contact-section > div {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero { padding: 100px 8%; align-items: center; justify-content: flex-start; }
+    
+    .hero-split-image {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      background-image: url('images/hero_split_bg_1773339670796.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom-left-radius: 64px;
+      z-index: 3;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+    }
+
+    .hero-bg {
+      background: linear-gradient(90deg, var(--black) 50%, transparent 100%);
+    }
+
+    .hero-content {
+      max-width: 500px;
+      width: 50%;
+      margin: 0;
+      padding-top: 40px;
+      padding-right: 20px;
+      z-index: 4;
+    }
+    .hero-title { font-size: 56px; line-height: 1.5; }
+    .hero-desc { font-size: 16px; margin-bottom: 48px; }
+    .hero-cta { max-width: 480px; }
+    .btn-primary, .btn-secondary { font-size: 14px; padding: 18px 24px; }
+
+    .service-cards { flex-direction: row; gap: 24px; }
+    .service-card { flex: 1; height: 500px; }
+
+    .report-card { padding: 80px; min-height: 560px; }
+    .report-title { font-size: 36px; }
+    .report-desc { font-size: 15px; }
+
+    .useful-list { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .useful-item { height: 260px; }
+    .useful-content { padding: 40px 32px; justify-content: flex-end; }
+    .useful-item::before { background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 60%, transparent 100%); }
+    .useful-title { font-size: 20px; }
+
+    .about-text { font-size: 16px; max-width: 1000px; margin: 0 auto 40px; }
+    .info-row { grid-template-columns: 160px 1fr; font-size: 15px; }
+
+    .contact-tel { font-size: 64px; }
+    .contact-hours { font-size: 14px; margin-bottom: 40px; }
+    .contact-btn, .contact-btn-outline {
+      display: inline-block;
+      width: 320px;
+      margin: 0 12px 20px;
+      font-size: 15px;
+    }
+
+    footer { padding: 80px 8% 40px; }
+    .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; }
+    .footer-nav a { font-size: 13px; padding: 8px 0; border: none; }
+
+    .bottom-nav { display: none; }
+    .bottom-spacer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    INCEPTION
+    <span>京都府城陽市の不動産</span>
+  </div>
+  <a href="tel:0774468811" class="tel-badge">
+    <span class="tel-label">お電話</span>
+    0774-46-8811
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-img-container">
+    <div class="hero-grid"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-accent2"></div>
+  </div>
+  <div class="hero-split-image"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Real Estate</div>
+    <h1 class="hero-title">
+      城陽市で<br>
+      <em>あなたの理想</em>の<br>
+      住まいを。
+    </h1>
+    <p class="hero-desc">
+      地域に根ざした不動産のプロが<br>
+      あなたの暮らしを全力サポート
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">お問い合わせ →</a>
+      <a href="#about" class="btn-secondary" onclick="event.preventDefault(); document.getElementById('about').scrollIntoView({behavior:'smooth'})">会社紹介</a>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section class="banner-section" style="padding: 24px 28px; background: var(--dark); text-align: center;">
+  <div style="max-width: 1000px; margin: 0 auto; animation: fadeUp 0.8s ease both;">
+    <a href="report.html" style="display: block; transition: opacity 0.3s; width: 100%; text-decoration: none;">
+      <div style="position: relative; width: 100%; background-image: url('images/report_banner_bg_1773336339904.png'); background-size: cover; background-position: center; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); overflow: hidden; display: flex; align-items: center; justify-content: flex-end; padding: clamp(20px, 5vw, 40px); box-sizing: border-box; aspect-ratio: 2.2/1; min-height: 250px;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, transparent 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.95) 100%);"></div>
+        <div style="position: relative; z-index: 1; text-align: right; width: 100%; max-width: 450px;">
+          <p style="color: var(--gold-light); font-size: clamp(12px, 2.5vw, 16px); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 8px;">＼ ご来店特典（全3種） ／</p>
+          <h2 style="color: var(--white); font-size: clamp(20px, 4vw, 32px); line-height: 1.4; margin-bottom: 12px; font-family: 'Noto Serif JP', serif;">エリア調査レポート<br><span style="color: var(--gold);">無料プレゼント</span></h2>
+          <p style="color: rgba(245,240,232,0.8); font-size: clamp(11px, 2vw, 14px); line-height: 1.6; margin-bottom: 24px;">物件周辺の施設やハザード情報など、<br>重要データがまとまった詳細レポートをご提供。</p>
+          <span style="display: inline-block; padding: 12px 28px; background: var(--gold); color: var(--black); font-size: 14px; font-weight: 600; border-radius: 4px; letter-spacing: 0.05em; transition: 0.3s;">レポート内容を見る →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news-section" id="news">
+  <div class="section-header reveal">
+    <div class="section-en">News</div>
+    <h2 class="section-title">お知らせ</h2>
+  </div>
+  <div class="news-list">
+    <div class="news-item reveal d1">
+      <p class="news-text">エリア情報レポートをプレゼントいたします！</p>
+    </div>
+    <div class="news-item reveal d2">
+      <p class="news-text">ホームページをオープンしました</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-header reveal">
+    <div class="section-en">Services</div>
+    <h2 class="section-title">事業内容</h2>
+  </div>
+  <div class="service-cards">
+    <a href="#contact" class="service-card reveal d1">
+      <div class="service-card-bg" style="background-image: url('images/service_buy_sell_1773340444142.png');"></div>
+      <div class="number-big" style="top:20px; right:20px; position:absolute; z-index:4;">01</div>
+      <div class="service-content">
+        <h3 class="service-name">売買仲介</h3>
+        <p class="service-desc">城陽市・京都南部エリアの土地・一戸建て・マンションの売買をご提案。丁寧なヒアリングに基づき、お客様の理想を形にする物件探しを尽力いたします。</p>
+      </div>
+    </a>
+    <a href="#contact" class="service-card reveal d2">
+      <div class="service-card-bg" style="background-image: url('images/service_rent_1773340470176.png');"></div>
+      <div class="number-big" style="top:20px; right:20px; position:absolute; z-index:4;">02</div>
+      <div class="service-content">
+        <h3 class="service-name">賃貸仲介</h3>
+        <p class="service-desc">お客様のライフスタイルに合わせた最適な賃貸物件をご紹介。内見からご契約、お引渡しまで、一貫してスムーズかつ細やかなサポートをお約束します。</p>
+      </div>
+    </a>
+    <a href="report.html" class="service-card reveal d3">
+      <div class="service-card-bg" style="background-image: url('images/service_report_1773340497052.png');"></div>
+      <div class="number-big" style="top:20px; right:20px; position:absolute; z-index:4;">03</div>
+      <div class="service-content">
+        <h3 class="service-name">情報提供</h3>
+        <p class="service-desc">独自のネットワークによる詳細な最新エリア情報をご提供。相場観や周辺環境のリアルなデータを可視化し、後悔のない選択をお手伝いいたします。</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- REPORT -->
+<section class="report-section" id="report">
+  <div class="section-header reveal">
+    <div class="section-en">Report</div>
+    <h2 class="section-title">エリア情報レポート</h2>
+  </div>
+  <div class="report-card reveal">
+    <div class="report-content">
+      <div class="report-badge">Free Present</div>
+      <h3 class="report-title">城陽市エリアの<br>最新情報をお届け</h3>
+      <p class="report-desc">
+        地域の不動産相場・生活環境・交通アクセスなど、住まい選びに役立つ詳細なエリア情報レポートを無料でプレゼントしています。
+      </p>
+      <a href="report.html" class="btn-gold-outline" style="background: rgba(10,10,10,0.5); backdrop-filter: blur(4px);">
+        レポートを受け取る <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- USEFUL INFO -->
+<section class="useful-section" id="useful">
+  <div class="section-header reveal">
+    <div class="section-en">Information</div>
+    <h2 class="section-title">不動産お役立ち情報</h2>
+  </div>
+  <div class="useful-list">
+    <a href="article.html" class="useful-item reveal d1">
+      <div class="useful-bg" style="background-image: url('images/info_article_1773340837526.png');"></div>
+      <div class="useful-content">
+        <span class="useful-sub">Real estate Guide</span>
+        <h3 class="useful-title">不動産 お役立ち一覧 <span class="useful-arrow">→</span></h3>
+      </div>
+    </a>
+    <a href="naiken.html" class="useful-item reveal d2">
+      <div class="useful-bg" style="background-image: url('images/info_inspection_1773340864203.png');"></div>
+      <div class="useful-content">
+        <span class="useful-sub">Viewing Checklist</span>
+        <h3 class="useful-title">内見時のご準備と確認 <span class="useful-arrow">→</span></h3>
+      </div>
+    </a>
+    <a href="hikkoshi.html" class="useful-item reveal d3">
+      <div class="useful-bg" style="background-image: url('images/info_moving_1773340888633.png');"></div>
+      <div class="useful-content">
+        <span class="useful-sub">Moving Manual</span>
+        <h3 class="useful-title">お引越しのチェックリスト <span class="useful-arrow">→</span></h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-header reveal">
+    <div class="section-en">About</div>
+    <h2 class="section-title">会社紹介</h2>
+  </div>
+  <div class="about-content reveal">
+    <p class="about-text" style="font-size: 14px; text-align: left; margin-bottom: 24px;">
+      信頼と実績で安心をご提供。お客様に不利益になりえる事柄もすべてお伝えし、お客様との信頼関係を築きます。<br><br>
+      豊富な不動産知識と経験で居住・事業用問わず賃貸・売買・管理など幅広く業務を行っております。また新築戸建・リフォームもしておりますので何でもご相談下さい。<br><br>
+      事前予約にて案内やご相談も24時間ご対応いたします。まずはお気軽にお問合せください。
+    </p>
+    <div class="about-info">
+      <div class="info-row">
+        <span class="info-label">会社名</span>
+        <span class="info-value">株式会社ＩＮＣＥＰＴＩＯＮ</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">代表者</span>
+        <span class="info-value">中谷　諒</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">所在地</span>
+        <span class="info-value">〒610-0101<br>京都府城陽市平川中道表１５－６</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">電話</span>
+        <span class="info-value">0774-46-8811</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">FAX</span>
+        <span class="info-value">0774-46-8188</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">営業時間</span>
+        <span class="info-value">8:00～20:00 ／ 定休日：年末年始</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">免許番号</span>
+        <span class="info-value">京都府知事免許（１）第１４９００号</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">所属団体</span>
+        <span class="info-value">(公社)京都府宅地建物取引業協会会員<br>(公社)近畿地区不動産公正取引協議会加盟</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">保証協会</span>
+        <span class="info-value">（公社）全国宅地建物取引業保証協会</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">主な取扱物件</span>
+        <span class="info-value" style="font-size: 13px; line-height: 1.8;">貸アパート・マンション ／ 貸戸建ほか ／ マンスリー ／ 貸事務所・店舗 ／ 駐車場 ／ 貸工場・倉庫 ／ 売新築マンション ／ 売新築一戸建 ／ 売中古マンション ／ 売中古一戸建 ／ 売公団・公社 ／ 売土地 ／ 売工場・倉庫 ／ 売事務所・店舗 ／ 投資用・その他 ／ リゾート物件</span>
+      </div>
+    <a href="https://www.athome.co.jp/ahki/inception.html" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 40px; text-align: center; background: rgba(201,169,110,0.05); padding: 32px 24px; border: 1px solid rgba(201,169,110,0.4); border-radius: 8px; position: relative; overflow: hidden; text-decoration: none; transition: background 0.3s ease;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+      <h3 style="color: var(--white); font-size: clamp(16px, 3vw, 20px); margin: 0; letter-spacing: 0.1em; font-family: 'Noto Serif JP', serif;">
+        不動産情報ネットワーク <span style="color: var(--gold); font-weight: 600; font-size: 1.2em; border-bottom: 2px solid var(--gold); padding-bottom: 2px;">at home</span> 加盟店
+        <span style="display: inline-block; font-size: 14px; margin-left: 8px; color: var(--gold-light);">→</span>
+      </h3>
+    </a>
+
+    <!-- ACCESS MAP -->
+    <div style="margin-top: 60px;">
+      <h3 style="color: var(--gold-light); font-size: 18px; letter-spacing: 0.05em; border-bottom: 1px solid rgba(201,169,110,0.3); padding-bottom: 12px; margin-bottom: 24px; text-align: left; font-weight: normal;">アクセスマップ</h3>
+      <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <iframe src="https://maps.google.com/maps?q=京都府城陽市平川中道表15-6&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-header reveal">
+    <div class="section-en">Contact</div>
+    <h2 class="section-title">お問い合わせ</h2>
+  </div>
+  <div class="reveal">
+    <div class="contact-tel gold-shimmer">0774-46-8811</div>
+    <div class="contact-hours">営業時間 8:00〜20:00 ／ 定休日：年末年始</div>
+    <a href="tel:0774468811" class="contact-btn">📞 今すぐお電話する</a>
+    <a href="contact.html" class="contact-btn-outline">✉ メールでお問い合わせ</a>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">INCEPTION</div>
+  <div class="footer-tagline">京都府城陽市の不動産</div>
+  <nav class="footer-nav">
+    <a href="#top">トップページ</a>
+    <a href="#about">会社紹介</a>
+    <a href="#report">レポート</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="sitepolicy.html">サイトポリシー</a>
+  </nav>
+  <div class="footer-copy">Copyright © INCEPTION All Rights Reserved.</div>
+</footer>
+
+
+<div class="bottom-spacer"></div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a href="#top" class="nav-item active">
+    <span class="nav-icon">🏡</span>
+    <span class="nav-label">ホーム</span>
+  </a>
+  <a href="#services" class="nav-item">
+    <span class="nav-icon">📋</span>
+    <span class="nav-label">サービス</span>
+  </a>
+  <a href="#report" class="nav-item">
+    <span class="nav-icon">📄</span>
+    <span class="nav-label">レポート</span>
+  </a>
+  <a href="#about" class="nav-item">
+    <span class="nav-icon">🏢</span>
+    <span class="nav-label">会社情報</span>
+  </a>
+  <a href="#contact" class="nav-item">
+    <span class="nav-icon">✉️</span>
+    <span class="nav-label">お問合せ</span>
+  </a>
+</nav>
+
+<!-- NAKATANI-SAN PLAYFUL EASTER EGG & SAKUMA-STYLE CHAOS -->
+<style>
+  /* SAKUMA-STYLE CHAOS CSS (Marquees removed) */
+
+  .emoji-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999;
+    font-size: 24px;
+    animation: popOut 1s ease-out forwards;
+  }
+
+  @keyframes popOut {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(var(--rot)); opacity: 0; }
+  }
+
+  /* Giant Background Nakatani */
+  .bg-nakatani {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vw;
+    height: 150vh;
+    background-image: url('images/nakatani.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: color-dodge;
+    transition: opacity 1s;
+    filter: blur(10px) contrast(1.5) saturate(2);
+  }
+</style>
+
+<div class="bg-nakatani" id="bg-nakatani"></div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const n = document.createElement('div');
+  n.id = 'nakatani-agent';
+  n.style.cssText = `
+    position: fixed;
+    z-index: 99999;
+    width: 140px;
+    height: 180px;
+    bottom: -200px;
+    right: 30px;
+    transition: bottom 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28), left 0.4s ease, right 0.4s ease;
+    pointer-events: auto;
+    cursor: grab;
+    perspective: 1000px; /* For 3D tracking */
+  `;
+  
+  // Crop the photo to focus on his upper body
+  const imgCont = document.createElement('div');
+  imgCont.id = 'nakatani-img-cont';
+  imgCont.style.cssText = `
+    width: 100%; height: 100%;
+    border-radius: 70px 70px 20px 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 3px solid var(--gold);
+    background: var(--dark);
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+  `;
+  const img = document.createElement('img');
+  img.src = 'images/nakatani.jpg';
+  // Position to center Nakatani's chest/face
+  img.style.cssText = `
+    position: absolute;
+    top: -20px;
+    left: -42px;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+  `;
+  imgCont.appendChild(img);
+  n.appendChild(imgCont);
+
+  // Speech bubble
+  const txt = document.createElement('div');
+  txt.style.cssText = `
+    position: absolute;
+    top: -50px;
+    left: -40px;
+    background: white;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    transform: translateZ(50px);
+  `;
+  
+  const tail = document.createElement('div');
+  tail.className = 'bubble-tail';
+  tail.style.cssText = `
+    position: absolute;
+    bottom: -8px;
+    right: 40px;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: white transparent transparent transparent;
+  `;
+  
+  const setMsg = (msg) => {
+    txt.innerText = msg;
+    txt.appendChild(tail);
+    txt.style.opacity = '1';
+  };
+
+  n.appendChild(txt);
+  document.body.appendChild(n);
+
+  let isVisible = false;
+  let scrollCount = 0;
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  
+  // Track Mouse for Avatar 3D look
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    if (isVisible) {
+      const rect = n.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      const deltaX = mouseX - centerX;
+      const deltaY = mouseY - centerY;
+      
+      const maxRotate = 25; // max degrees
+      const rotY = Math.max(-maxRotate, Math.min(maxRotate, (deltaX / window.innerWidth) * maxRotate * 2));
+      const rotX = Math.max(-maxRotate, Math.min(maxRotate, -(deltaY / window.innerHeight) * maxRotate * 2));
+      
+      imgCont.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+    }
+  });
+
+  // Appear occasionally when scrolling
+  window.addEventListener('scroll', () => {
+    scrollCount++;
+    if(scrollCount > 15 && !isVisible) {
+      if(Math.random() > 0.6) {
+        isVisible = true;
+        n.style.bottom = '-20px'; // peek out
+        
+        let msgs = ['代表の中谷です！', '良い物件ありますよ👀', 'ご要望お聞かせください！', 'いつでもお電話を📞', '城陽市はお任せを👍', 'こっち見てますよ！'];
+        setMsg(msgs[Math.floor(Math.random()*msgs.length)]);
+        
+        // Hide again after 5 sec
+        setTimeout(() => {
+          if(isVisible) {
+            n.style.bottom = '-200px';
+            txt.style.opacity = '0';
+            imgCont.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            isVisible = false;
+          }
+        }, 5000);
+      }
+      scrollCount = 0;
+    }
+    
+    // Random Giant Nakatani opacity based on scroll pos
+    const scrollPos = window.scrollY;
+    const bgN = document.getElementById('bg-nakatani');
+    if (scrollPos > 1000 && scrollPos < 2000) {
+      let op = (Math.sin(scrollPos * 0.005) + 1) / 2 * 0.08; // subtle throb
+      bgN.style.opacity = op;
+    } else {
+      bgN.style.opacity = 0;
+    }
+  });
+
+  // Playful interaction: get out of the way / run away!
+  n.addEventListener('mouseenter', () => {
+    if(!isVisible) return;
+    
+    // Move to a random X position to "dodge" the user
+    const newX = Math.floor(Math.random() * (window.innerWidth - 180));
+    n.style.right = 'auto';
+    n.style.left = newX + 'px';
+    n.style.bottom = '-40px';
+    
+    setMsg('おっと！？🏃💨');
+  });
+
+  // Emoji explosion on click (Sakuma-style random interactions)
+  const emojis = ['🏠', '🔑', '💸', '✨', '🏢', '🤝'];
+  document.addEventListener('click', (e) => {
+    // Only spawn if clicking on background or free space, avoid breaking buttons
+    if (['A', 'BUTTON', 'INPUT'].includes(e.target.tagName)) return;
+
+    for (let i = 0; i < 5; i++) {
+      const p = document.createElement('div');
+      p.className = 'emoji-particle';
+      p.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      p.style.left = e.clientX + 'px';
+      p.style.top = e.clientY + 'px';
+      
+      const angle = (Math.random() * Math.PI * 2);
+      const dist = 50 + Math.random() * 100;
+      const tx = Math.cos(angle) * dist + 'px';
+      const ty = Math.sin(angle) * dist + 'px';
+      const rot = (Math.random() * 360) + 'deg';
+      
+      p.style.setProperty('--tx', tx);
+      p.style.setProperty('--ty', ty);
+      p.style.setProperty('--rot', rot);
+      
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 1000);
+    }
+  });
+});
+</script>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Bottom nav active state
+  const sections = document.querySelectorAll('section[id], header');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+
+  // Smooth anchor scroll for all internal links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Smooth tel click feedback
+  document.querySelectorAll('a[href^="tel"]').forEach(el => {
+    el.addEventListener('click', () => {
+      el.style.opacity = '0.7';
+      setTimeout(() => el.style.opacity = '', 300);
+    });
+  });
+</script>
+</body>
+</html>
