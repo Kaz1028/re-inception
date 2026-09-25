@@ -1,0 +1,14 @@
+.env
+node_modules/
+test-output/
+*.log
+
+data/facilities/
+.vercel
+.env*
+
+.env*
+!.env.example
+.vercel/
+dist/
+access-private.txt
