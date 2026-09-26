@@ -1,3 +1,5 @@
+import {createClientPdf} from './client-pdf.mjs';
+import {workbook} from './xlsx.mjs';
 import {groups,items,itemById,defaultSelection} from './catalog.mjs';
 import {buildReport,excelRows,escapeHtml as e} from './report.mjs';
 const $=id=>document.getElementById(id);
@@ -42,6 +44,6 @@ $('generateButton').onclick=async()=>{if(state.busy||!state.point||!state.select
 function download(data,type,name){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}
 function filename(ext){return 'エリア調査レポート_'+new Date().toISOString().slice(0,10)+'.'+ext;}
 $('htmlButton').onclick=()=>{if(state.html)download(state.html,'text/html;charset=utf-8',filename('html'));};
-$('excelButton').onclick=async()=>{if(!state.report)return;try{const response=await fetch('/api/excel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({rows:excelRows(state.report,state.reportSettings)})});if(!response.ok)throw Error('Excel出力に失敗しました。');download(await response.arrayBuffer(),'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',filename('xlsx'));}catch(err){toast(err.message);}};
-$('pdfButton').onclick=async()=>{if(!state.html)return;const button=$('pdfButton');button.disabled=true;button.textContent='PDFを作成中…';try{const response=await fetch('/api/pdf',{method:'POST',headers:{'Content-Type':'application/gzip'},body:await new Response(new Blob([JSON.stringify({html:state.html})]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer()});if(!response.ok){const error=await response.json();throw Error(error.error||'PDF作成に失敗しました。');}if(response.headers.get('content-type')?.includes('application/json')){const {url}=await response.json();const file=await fetch(url);if(!file.ok)throw Error('PDFのダウンロードに失敗しました。');download(await file.arrayBuffer(),'application/pdf',filename('pdf'));}else download(await response.arrayBuffer(),'application/pdf',filename('pdf'));toast('PDFを保存しました。ダウンロードをご確認ください。');}catch(err){toast(err.message);}finally{button.disabled=false;button.textContent='PDF保存';}};
+$('excelButton').onclick=()=>{if(!state.report)return;try{download(workbook(excelRows(state.report,state.reportSettings)),'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',filename('xlsx'));}catch(err){toast(err.message);}};
+$('pdfButton').onclick=async()=>{if(!state.html)return;const button=$('pdfButton');button.disabled=true;button.textContent='PDFを準備中…';try{const pdf=await createClientPdf(state.html,(n,total)=>button.textContent=`PDF作成 ${n}/${total}`);download(pdf,'application/pdf',filename('pdf'));toast('PDFを作成しました。端末のダウンロードをご確認ください。');}catch(err){toast(err.message);}finally{button.disabled=false;button.textContent='PDF保存';}};
 renderCatalog();initMap();try{const config=await api('/api/config');state.mlit=config.mlit;renderCatalog();}catch{toast('サーバーとの接続を確認できません。起動状態をご確認ください。');}
