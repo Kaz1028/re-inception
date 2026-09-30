@@ -1,0 +1,9 @@
+.env*
+!.env.example
+node_modules
+test
+test-output
+data/sources
+data/facilities
+*.log
+access-private.txt

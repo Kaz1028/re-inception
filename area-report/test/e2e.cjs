@@ -1,0 +1,22 @@
+const {chromium}=require('playwright');
+const fs=require('node:fs/promises');
+(async()=>{
+ const out=__dirname+'/../test-output';await fs.mkdir(out,{recursive:true});
+ const browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+ const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:4318/');await page.waitForSelector('.leaflet-tile-loaded');
+ await page.locator('#address').fill('城陽市平川中道表');await page.locator('#searchButton').click();await page.locator('#searchResults button').first().click();
+ await page.screenshot({path:out+'/desktop.png',fullPage:true});
+ await page.locator('#configureButton').click();await page.screenshot({path:out+'/settings.png'});
+ await page.locator('[data-tab="cover"]').click();await page.locator('#customer').fill('レポート動作確認');await page.locator('[data-close="settingsDialog"]').last().click();
+ const response=page.waitForResponse(r=>r.url().endsWith('/api/report'),{timeout:65000});await page.locator('#generateButton').click();const data=await(await response).json();await fs.writeFile(out+'/live-data.json',JSON.stringify(data,null,2));
+ await page.waitForSelector('#reportDialog[open]');const frame=page.frames().find(f=>f.parentFrame());await frame.waitForSelector('.page');await frame.locator('img').first().waitFor({state:'attached'});
+ const reportHtml=await frame.content();await fs.writeFile(out+'/report.html',reportHtml);
+ const reportPage=await browser.newPage({viewport:{width:850,height:1200}});await reportPage.setContent(reportHtml,{waitUntil:'networkidle'});await reportPage.screenshot({path:out+'/report-cover.png'});
+ await reportPage.pdf({path:out+'/report.pdf',format:'A4',printBackground:true,preferCSSPageSize:true});
+ const overflow=await reportPage.locator('.page').evaluateAll(pages=>pages.map((p,i)=>{const footer=p.querySelector('.page-footer');const preceding=footer?.previousElementSibling;return {page:i+1,height:p.getBoundingClientRect().height,overlap:preceding&&preceding.getBoundingClientRect().bottom>footer.getBoundingClientRect().top};}).filter(x=>x.overlap));
+ const dl=page.waitForEvent('download');await page.locator('#excelButton').click();await(await dl).saveAs(out+'/report.xlsx');
+ await page.locator('[data-close="reportDialog"]').click();await page.setViewportSize({width:390,height:844});await page.screenshot({path:out+'/mobile.png',fullPage:true});
+ const mobileOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
+ console.log(JSON.stringify({errors,overflow,mobileOverflow,results:Object.fromEntries(Object.entries(data.results||{}).map(([k,v])=>[k,{status:v.status,count:v.rows.length,message:v.status==='error'?v.message:undefined}]))},null,2));await browser.close();if(errors.length||overflow.length||mobileOverflow)process.exitCode=1;
+})().catch(e=>{console.error(e);process.exit(1);});
