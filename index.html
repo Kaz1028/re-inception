@@ -71,8 +71,8 @@
     .hero-box { margin-top:16px !important; min-height:320px !important; padding:24px !important; }
     .hero-h1 { font-size:28px !important; }
     .hero-ov { background:linear-gradient(180deg,rgba(11,32,52,.15) 0%,rgba(11,32,52,.35) 40%,rgba(11,32,52,.8) 100%) !important; }
-    #top, #trust, #services, #managed, #search, #listings, #kinds, #about { padding-left:16px !important; padding-right:16px !important; }
-    #services, #managed, #search, #listings, #kinds, #about { padding-top:52px !important; }
+    #top, #trust, #services, #managed, #search, #listings, #about { padding-left:16px !important; padding-right:16px !important; }
+    #services, #managed, #search, #listings, #about { padding-top:52px !important; }
     #report, #contact { margin-top:52px !important; }
     #report > div, #contact > div, footer > div { padding-left:16px !important; padding-right:16px !important; }
     .card-grid { grid-template-columns:minmax(0,1fr) !important; }
@@ -102,7 +102,7 @@
         <a href="#services" style="color:#1B222B">{{ L.nav_services }}</a>
         <a href="#managed" style="color:#1B222B">{{ L.nav_managed }}</a>
         <a href="#listings" style="color:#1B222B">{{ L.nav_listings }}</a>
-        <a href="#kinds" style="color:#1B222B">{{ L.nav_kinds }}</a>
+        <a href="#search" style="color:#1B222B">{{ L.nav_kinds }}</a>
         <a href="#report" style="color:#1B222B">{{ L.nav_report }}</a>
         <a href="#about" style="color:#1B222B">{{ L.nav_about }}</a>
       </nav>
@@ -126,7 +126,7 @@
           <a href="#services" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_services }}</a>
           <a href="#managed" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_managed }}</a>
           <a href="#listings" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_listings }}</a>
-          <a href="#kinds" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_kinds }}</a>
+          <a href="#search" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_kinds }}</a>
           <a href="#report" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_report }}</a>
           <a href="#about" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_about }}</a>
         </nav>
@@ -267,22 +267,6 @@
     </div>
   </section>
 
-  <section id="kinds" style="max-width:1200px;margin:0 auto;padding:72px 24px 0">
-    <div class="athome-eyebrow">SEARCH BY TYPE</div>
-    <h2 style="font-family:'Zen Old Mincho',serif;font-size:28px;margin:6px 0 24px">{{ L.at_types }}</h2>
-    <h3 style="font-size:15px">{{ L.at_home_buy }}</h3>
-    <div class="athome-grid">
-      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tochi/search_setting?layout2=true" target="athome-property-search">{{ L.at_land }} ↑</a>
-      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kodate/search_setting?layout2=true" target="athome-property-search">{{ L.at_house }} ↑</a>
-      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/mansion/search_setting?layout2=true" target="athome-property-search">{{ L.at_mansion }} ↑</a>
-    </div>
-    <h3 style="font-size:15px;margin-top:24px">{{ L.at_home_rent }}</h3>
-    <div class="athome-grid">
-      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/chintai/search_setting?layout2=true" target="athome-property-search">{{ L.at_rental_home }} ↑</a>
-      <a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/chintai/shumoku?layout2=true" target="athome-property-search">{{ L.at_business_rent }} ↑</a>
-    </div>
-  </section>
-
   <section id="report" style="margin:72px 0 0;background:#12395B;color:#fff">
     <div style="max-width:1200px;margin:0 auto;padding:60px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
       <div>
@@ -369,7 +353,7 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:9px;font-size:13px">
         <a href="#listings" style="color:rgba(255,255,255,.8)">{{ L.nav_listings }}</a>
-        <a href="#kinds" style="color:rgba(255,255,255,.8)">{{ L.nav_kinds }}</a>
+        <a href="#search" style="color:rgba(255,255,255,.8)">{{ L.nav_kinds }}</a>
         <a href="#services" style="color:rgba(255,255,255,.8)">{{ L.nav_services }}</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:9px;font-size:13px">
