@@ -258,67 +258,28 @@
   </section>
 
   <section id="listings" style="max-width:1200px;margin:0 auto;padding:72px 24px 0">
-    <div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:8px">
-      <div>
-        <div style="font-size:11px;letter-spacing:.3em;color:#A3803B">PROPERTIES</div>
-        <h2 style="font-family:'Zen Old Mincho',serif;font-size:32px;font-weight:700;margin:6px 0 0">{{ listingsTitle }}</h2>
-      </div>
-      <p style="margin:0 0 6px;font-size:13px;color:#7A7468">{{ L.list_note }}</p>
-    </div>
-
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 24px;border-top:1px solid #E6E0D6;padding-top:22px">
-      <sc-for list="{{ chips }}" as="c" hint-placeholder-count="5">
-        <button onClick="{{ c.onClick }}" style="{{ c.style }}">{{ c.label }}</button>
-      </sc-for>
-    </div>
-
-    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
-      <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
-        <article onClick="{{ p.onClick }}" style="background:#fff;border:1px solid #E6E0D6;border-radius:3px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column" style-hover="border-color:#12395B;box-shadow:0 10px 30px rgba(27,34,43,.09)">
-          <div style="position:relative;aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#E7E1D7 0 8px,#F1ECE4 8px 16px);display:flex;align-items:center;justify-content:center">
-            <span style="font-family:ui-monospace,monospace;font-size:11px;color:#6E675B;background:rgba(250,248,244,.9);padding:4px 8px">{{ p.ph }}</span>
-            <span style="position:absolute;top:0;left:0;background:#12395B;color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:6px 12px">{{ p.kind }}</span>
-            <span style="{{ p.tagStyle }}">{{ p.tag }}</span>
-          </div>
-          <div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1">
-            <div style="font-size:12px;color:#7A7468">{{ p.address }}</div>
-            <h3 style="font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:600;margin:0;line-height:1.5;text-wrap:pretty">{{ p.title }}</h3>
-            <div style="font-family:'Zen Old Mincho',serif;font-size:27px;font-weight:700;color:#B0322F;line-height:1.2">{{ p.price }}</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#E6E0D6;border:1px solid #E6E0D6;margin-top:2px">
-              <div style="background:#FCFBF9;padding:8px 10px"><span style="font-size:10px;color:#7A7468;display:block">{{ L.spec_layout }}</span><span style="font-size:14px;font-weight:700">{{ p.layout }}</span></div>
-              <div style="background:#FCFBF9;padding:8px 10px"><span style="font-size:10px;color:#7A7468;display:block">{{ L.spec_area }}</span><span style="font-size:14px;font-weight:700">{{ p.area }}</span></div>
-              <div style="background:#FCFBF9;padding:8px 10px"><span style="font-size:10px;color:#7A7468;display:block">{{ L.spec_traffic }}</span><span style="font-size:13px;font-weight:700">{{ p.station }}</span></div>
-              <div style="background:#FCFBF9;padding:8px 10px"><span style="font-size:10px;color:#7A7468;display:block">{{ L.spec_built }}</span><span style="font-size:13px;font-weight:700">{{ p.built }}</span></div>
-            </div>
-            <div style="margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#12395B;font-weight:700">
-              <span>{{ L.detail }}</span>
-              <span style="color:#7A7468;font-weight:400">{{ L.propNo }} {{ p.id }}</span>
-            </div>
-          </div>
-        </article>
-      </sc-for>
-    </div>
-    <div style="text-align:center;margin-top:34px">
-      <a href="#contact" style="display:inline-block;border:1px solid #12395B;color:#12395B;padding:14px 40px;font-size:14px;font-weight:700;letter-spacing:.08em" style-hover="background:#12395B;color:#fff">{{ allBtn }}</a>
+    <div class="athome-eyebrow">PROPERTIES</div>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-size:32px;margin:6px 0 12px">{{ L.sale_title }}</h2>
+    <p style="color:#7A7468;margin:0 0 24px">{{ L.sale_note }}</p>
+    <iframe class="athome-widget-frame" src="./athome-sale.html" title="売買物件：土地・一戸建て・マンション" style="display:block;width:100%;height:440px;border:0" loading="lazy"></iframe>
+    <div style="display:flex;justify-content:center;margin-top:24px">
+      <a class="athome-link" href="https://asp.athome.jp/074518/tokushu/20261022010528?layout2=true" target="athome-property-search">{{ L.sale_more }} ↑</a>
     </div>
   </section>
 
   <section id="kinds" style="max-width:1200px;margin:0 auto;padding:72px 24px 0">
-    <div style="font-size:11px;letter-spacing:.3em;color:#A3803B">SEARCH BY TYPE</div>
-    <h2 style="font-family:'Zen Old Mincho',serif;font-size:32px;font-weight:700;margin:6px 0 26px">{{ L.kinds_h2 }}</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
-      <sc-for list="{{ typeTiles }}" as="t" hint-placeholder-count="6">
-        <a href="#listings" style="background:#fff;border:1px solid #E6E0D6;padding:24px 22px;display:flex;flex-direction:column;gap:6px" style-hover="background:#F4EFE7;border-color:#12395B">
-          <span style="font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:700;color:#12395B">{{ t.jp }}</span>
-          <span style="font-size:10px;letter-spacing:.18em;color:#A3803B">{{ t.en }}</span>
-          <span style="font-size:13px;color:#7A7468;margin-top:6px">{{ t.count }}</span>
-        </a>
-      </sc-for>
+    <div class="athome-eyebrow">SEARCH BY TYPE</div>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-size:28px;margin:6px 0 24px">{{ L.at_types }}</h2>
+    <h3 style="font-size:15px">{{ L.at_home_buy }}</h3>
+    <div class="athome-grid">
+      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tochi/search_setting?layout2=true" target="athome-property-search">{{ L.at_land }} ↑</a>
+      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kodate/search_setting?layout2=true" target="athome-property-search">{{ L.at_house }} ↑</a>
+      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/mansion/search_setting?layout2=true" target="athome-property-search">{{ L.at_mansion }} ↑</a>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
-      <sc-for list="{{ areas }}" as="a" hint-placeholder-count="8">
-        <a href="#listings" style="border:1px solid #DCD5C9;background:#fff;padding:9px 16px;font-size:13px;color:#1B222B" style-hover="border-color:#12395B;color:#12395B">{{ a }}</a>
-      </sc-for>
+    <h3 style="font-size:15px;margin-top:24px">{{ L.at_home_rent }}</h3>
+    <div class="athome-grid">
+      <a class="athome-link" href="https://asp.athome.jp/074518/shumoku/chintai/search_setting?layout2=true" target="athome-property-search">{{ L.at_rental_home }} ↑</a>
+      <a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/chintai/shumoku?layout2=true" target="athome-property-search">{{ L.at_business_rent }} ↑</a>
     </div>
   </section>
 
@@ -425,78 +386,10 @@
     <div style="border-top:1px solid rgba(255,255,255,.12);padding:16px 24px;text-align:center;font-size:11px;color:rgba(255,255,255,.5)">Copyright © INCEPTION All Rights Reserved.</div>
   </footer>
 
-  <sc-if value="{{ hasSel }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closeSel }}" style="position:fixed;inset:0;z-index:60;background:rgba(15,22,30,.55);display:flex;align-items:center;justify-content:center;padding:24px">
-      <div onClick="{{ stop }}" style="background:#FAF8F4;max-width:880px;width:100%;max-height:88vh;overflow-y:auto;overflow-x:hidden;border-radius:3px">
-        <div style="position:relative;width:100%;height:min(34vh,280px);flex-shrink:0;background:repeating-linear-gradient(135deg,#E7E1D7 0 10px,#F1ECE4 10px 20px);display:flex;align-items:center;justify-content:center">
-          <span style="font-family:ui-monospace,monospace;font-size:12px;color:#6E675B;background:rgba(250,248,244,.9);padding:6px 10px;text-align:center">{{ sel.ph }}{{ L.ph_note }}</span>
-          <button onClick="{{ closeSel }}" style="position:absolute;top:12px;right:12px;background:#141A21;color:#fff;border:none;width:34px;height:34px;font-size:16px;cursor:pointer">×</button>
-        </div>
-        <div style="padding:26px 30px 32px">
-          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
-            <span style="background:#12395B;color:#fff;font-size:11px;font-weight:700;padding:5px 11px">{{ sel.kind }}</span>
-            <span style="font-size:12px;color:#7A7468">{{ L.propNo }} {{ sel.id }}／{{ sel.address }}</span>
-          </div>
-          <h3 style="font-family:'Zen Old Mincho',serif;font-size:26px;font-weight:700;margin:0 0 6px">{{ sel.title }}</h3>
-          <div style="font-family:'Zen Old Mincho',serif;font-size:36px;font-weight:700;color:#B0322F;margin-bottom:20px">{{ sel.price }}</div>
-          <div style="border-top:1px solid #E6E0D6">
-            <sc-for list="{{ selRows }}" as="r" hint-placeholder-count="7">
-              <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid #E6E0D6;font-size:13.5px">
-                <span style="color:#7A7468">{{ r.k }}</span>
-                <span>{{ r.v }}</span>
-              </div>
-            </sc-for>
-          </div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-            <a href="tel:0774468811" style="background:#12395B;color:#fff;padding:14px 28px;font-size:14px;font-weight:700">{{ L.ask_tel }}</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLAG15RCiD9UJ5auv0Dihr4roLxF66VSRE0m-6t0g3Z_2SkA/viewform" target="_blank" rel="noopener" style="border:1px solid #12395B;color:#12395B;padding:14px 28px;font-size:14px;font-weight:700">{{ L.book }}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </sc-if>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
-const DATA = [
-  { id:"S-1024", deal:"売買", kind:"売土地", tag:"新着", title:"城陽市寺田　整形地・建築条件なし", address:"京都府城陽市寺田", price:"1,480万円", layout:"—", area:"土地 165.20㎡", station:"近鉄 寺田駅 徒歩8分", built:"上下水道引込済", ph:"更地の全景写真",
-    zh:{ tag:"新上架", title:"城阳市寺田　地形规整·无建筑条件限制", address:"京都府城阳市寺田", price:"1,480万日元", area:"土地 165.20㎡", station:"近铁 寺田站 步行8分钟", built:"已接通上下水道", ph:"空地全景照片" } },
-  { id:"S-1025", deal:"売買", kind:"売新築一戸建", tag:"新着", title:"城陽市平川　全2棟　南向きリビング", address:"京都府城陽市平川", price:"3,280万円", layout:"4LDK", area:"建物 98.54㎡", station:"JR 城陽駅 徒歩11分", built:"2026年3月／木造2階", ph:"新築外観（正面）",
-    zh:{ tag:"新上架", title:"城阳市平川　共2栋　朝南客厅", address:"京都府城阳市平川", price:"3,280万日元", area:"建筑 98.54㎡", station:"JR 城阳站 步行11分钟", built:"2026年3月／木造2层", ph:"新建住宅外观（正面）" } },
-  { id:"S-1026", deal:"売買", kind:"売中古一戸建", tag:"価格変更", title:"城陽市久世　リフォーム済・駐車2台", address:"京都府城陽市久世", price:"2,180万円", layout:"4LDK", area:"建物 105.16㎡", station:"JR 城陽駅 徒歩15分", built:"2004年／木造2階", ph:"中古戸建 外観",
-    zh:{ tag:"价格变更", title:"城阳市久世　已翻新·可停2辆车", address:"京都府城阳市久世", price:"2,180万日元", area:"建筑 105.16㎡", station:"JR 城阳站 步行15分钟", built:"2004年／木造2层", ph:"二手独栋外观" } },
-  { id:"S-1027", deal:"売買", kind:"売中古マンション", tag:"おすすめ", title:"城陽市富野　角部屋・最上階　南東角", address:"京都府城陽市富野", price:"1,780万円", layout:"3LDK", area:"専有 72.40㎡", station:"近鉄 富野荘駅 徒歩5分", built:"2008年／RC7階建", ph:"マンション外観",
-    zh:{ tag:"推荐", title:"城阳市富野　转角房·顶层　东南向", address:"京都府城阳市富野", price:"1,780万日元", area:"专有 72.40㎡", station:"近铁 富野庄站 步行5分钟", built:"2008年／RC结构7层", ph:"公寓外观" } },
-  { id:"S-1028", deal:"売買", kind:"売土地", tag:"", title:"久御山町佐山　事業用地・幹線道路沿い", address:"京都府久世郡久御山町佐山", price:"5,600万円", layout:"—", area:"土地 486.00㎡", station:"京阪 淀駅 車8分", built:"市街化区域／準工業", ph:"事業用地の航空写真",
-    zh:{ tag:"", title:"久御山町佐山　事业用地·干线道路沿线", address:"京都府久世郡久御山町佐山", price:"5,600万日元", area:"土地 486.00㎡", station:"京阪 淀站 驾车8分钟", built:"市街化区域／准工业地区", ph:"事业用地航拍照片" } },
-  { id:"S-1029", deal:"売買", kind:"売中古一戸建", tag:"", title:"宇治市大久保　古家付土地・再建築可", address:"京都府宇治市大久保町", price:"1,180万円", layout:"3DK", area:"土地 112.30㎡", station:"近鉄 大久保駅 徒歩12分", built:"1981年／木造2階", ph:"古家付土地 外観",
-    zh:{ tag:"", title:"宇治市大久保　附旧房土地·可重建", address:"京都府宇治市大久保町", price:"1,180万日元", area:"土地 112.30㎡", station:"近铁 大久保站 步行12分钟", built:"1981年／木造2层", ph:"附旧房土地外观" } },
-  { id:"R-2041", deal:"賃貸", kind:"貸アパート", tag:"新着", title:"城陽市寺田　礼金ゼロ・室内洗濯機置場", address:"京都府城陽市寺田", price:"5.4万円", layout:"2K", area:"専有 38.20㎡", station:"近鉄 寺田駅 徒歩6分", built:"1998年／軽量鉄骨", ph:"アパート外観",
-    zh:{ tag:"新上架", title:"城阳市寺田　零礼金·室内设洗衣机位", address:"京都府城阳市寺田", price:"5.4万日元/月", area:"专有 38.20㎡", station:"近铁 寺田站 步行6分钟", built:"1998年／轻钢结构", ph:"小型公寓外观" } },
-  { id:"R-2042", deal:"賃貸", kind:"貸マンション", tag:"おすすめ", title:"城陽市平川　ペット可・南向き2面採光", address:"京都府城陽市平川", price:"7.8万円", layout:"2LDK", area:"専有 56.70㎡", station:"JR 城陽駅 徒歩9分", built:"2015年／RC5階建", ph:"賃貸マンション外観",
-    zh:{ tag:"推荐", title:"城阳市平川　可养宠物·朝南双面采光", address:"京都府城阳市平川", price:"7.8万日元/月", area:"专有 56.70㎡", station:"JR 城阳站 步行9分钟", built:"2015年／RC结构5层", ph:"出租公寓外观" } },
-  { id:"R-2043", deal:"賃貸", kind:"貸戸建", tag:"", title:"城陽市久世　駐車2台・庭付き一戸建", address:"京都府城陽市久世", price:"9.2万円", layout:"4LDK", area:"建物 96.05㎡", station:"JR 城陽駅 徒歩13分", built:"2010年／木造2階", ph:"貸戸建 外観",
-    zh:{ tag:"", title:"城阳市久世　可停2辆车·带庭院独栋", address:"京都府城阳市久世", price:"9.2万日元/月", area:"建筑 96.05㎡", station:"JR 城阳站 步行13分钟", built:"2010年／木造2层", ph:"出租独栋外观" } },
-  { id:"R-2044", deal:"賃貸", kind:"貸事務所・店舗", tag:"", title:"城陽市寺田　1階路面・幹線道路沿い店舗", address:"京都府城陽市寺田", price:"14.0万円", layout:"—", area:"専有 62.80㎡", station:"近鉄 寺田駅 徒歩4分", built:"2001年／RC", ph:"路面店舗 外観",
-    zh:{ tag:"", title:"城阳市寺田　1楼临街·干线道路沿线店铺", address:"京都府城阳市寺田", price:"14.0万日元/月", area:"专有 62.80㎡", station:"近铁 寺田站 步行4分钟", built:"2001年／RC结构", ph:"临街店铺外观" } },
-  { id:"R-2045", deal:"賃貸", kind:"駐車場", tag:"", title:"城陽市富野　屋外平置き　軽〜普通車", address:"京都府城陽市富野", price:"0.8万円", layout:"—", area:"1台分", station:"近鉄 富野荘駅 徒歩7分", built:"アスファルト舗装", ph:"駐車場 全景",
-    zh:{ tag:"", title:"城阳市富野　露天平面车位　可停轻型〜普通车", address:"京都府城阳市富野", price:"0.8万日元/月", area:"1个车位", station:"近铁 富野庄站 步行7分钟", built:"沥青铺装", ph:"停车场全景" } },
-  { id:"R-2046", deal:"賃貸", kind:"貸マンション", tag:"新着", title:"京田辺市三山木　単身者向け・ネット無料", address:"京都府京田辺市三山木", price:"4.9万円", layout:"1K", area:"専有 26.40㎡", station:"JR 三山木駅 徒歩3分", built:"2019年／RC4階建", ph:"単身向け外観",
-    zh:{ tag:"新上架", title:"京田边市三山木　适合单身·免费网络", address:"京都府京田边市三山木", price:"4.9万日元/月", area:"专有 26.40㎡", station:"JR 三山木站 步行3分钟", built:"2019年／RC结构4层", ph:"单身公寓外观" } }
-];
-
-const DEAL_ZH = { "売買": "买卖", "賃貸": "租赁" };
-const TAB_ZH = { "売買": "买房", "賃貸": "租房" };
-const KIND_ZH = {
-  "売土地": "土地（出售）", "売新築一戸建": "新建独栋（出售）", "売中古一戸建": "二手独栋（出售）", "売中古マンション": "二手公寓（出售）",
-  "貸アパート": "出租小型公寓", "貸マンション": "出租公寓", "貸戸建": "出租独栋", "貸事務所・店舗": "出租办公室·店铺", "駐車場": "停车场"
-};
-const GROUP_ZH = {
-  "売土地": "土地（出售）", "売新築一戸建": "新建独栋（出售）", "売中古一戸建": "二手独栋（出售）", "売中古マンション": "二手公寓（出售）",
-  "貸マンション・アパート": "出租公寓·小型公寓", "貸戸建・事務所・駐車場": "出租独栋·办公室·停车场"
-};
-
-/* 表示文言（ja: 日本語 / zh: 简体中文） */
 const I18N = {
   ja: {
     title: "INCEPTION｜関西の不動産",
@@ -509,6 +402,7 @@ const I18N = {
     spec_layout: "間取り", spec_area: "面積", spec_traffic: "交通", spec_built: "築年／構造",
     search_title: "物件をさがす",
     at_area_rent: "地域から住まいを借りる", at_joyo: "城陽市", at_uji: "宇治市", at_kyotanabe: "京田辺市", at_area_other: "その他の地域・売買", at_search_panel: "物件を検索・条件を絞り込む",
+    sale_title: "売買物件のご紹介", sale_note: "アットホームで公開中の土地・一戸建て・マンションを新着順にご紹介します。", sale_more: "売買物件をもっと見る",
     at_keyword: "キーワードから探す", at_feature: "城陽の築浅賃貸", at_feature_more: "特集をすべて見る", at_feature_note: "城陽市の築5年以内の賃貸物件をご紹介。最新の募集状況は詳細ページでご確認いただけます。",
     at_buy: "売買を探す", at_rent: "賃貸を探す", at_all: "全物件・リゾートを探す", at_intro: "住まいから店舗・事務所まで、ご希望の物件をお探しいただけます。", at_note: "上のボタンから探し方を選ぶと、この画面に表示されます。価格・間取りなどの条件も絞り込めます。", at_types: "物件の種類から探す", at_home_buy: "住まいを買う", at_home_rent: "住まいを借りる", at_business_rent: "事業用物件を借りる", at_business_buy: "事業用物件を買う", at_mansion: "マンション", at_house: "一戸建て", at_land: "土地", at_rental_home: "アパート・マンション・一戸建て", at_shop: "店舗", at_office: "事務所", at_parking: "駐車場", at_other: "ビル・倉庫・その他", at_business_all: "事業用物件すべて", f_area: "エリア", f_station: "沿線・駅", f_price: "価格", f_layout: "間取り",
     all: "すべて", c_joyo: "城陽市", c_uji: "宇治市", c_kyotanabe: "京田辺市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
@@ -568,6 +462,7 @@ const I18N = {
     spec_layout: "户型", spec_area: "面积", spec_traffic: "交通", spec_built: "建成年份／结构",
     search_title: "查找房源",
     at_area_rent: "按地区寻找出租住宅", at_joyo: "城阳市", at_uji: "宇治市", at_kyotanabe: "京田边市", at_area_other: "其他地区・买卖", at_search_panel: "搜索房源・筛选条件（日语）",
+    sale_title: "出售房源介绍", sale_note: "按最新发布顺序展示 at home 上公开的土地、独栋住宅和公寓。", sale_more: "查看更多出售房源",
     at_keyword: "关键词搜索（日语）", at_feature: "城阳市楼龄5年以内的出租房源", at_feature_more: "查看全部专题房源", at_feature_note: "介绍城阳市楼龄5年以内的出租房源。最新招租信息请查看日语详情页面。",
     at_buy: "购买房产", at_rent: "租赁房产", at_all: "全部房源・度假房产", at_intro: "从住宅到店铺、办公室，查找符合您需求的房产。", at_note: "点击上方按钮，即可在此显示日语搜索画面，并按价格、户型等条件筛选。", at_types: "按房产类型查找", at_home_buy: "购买住宅", at_home_rent: "租赁住宅", at_business_rent: "租赁商用房产", at_business_buy: "购买商用房产", at_mansion: "公寓", at_house: "独栋住宅", at_land: "土地", at_rental_home: "公寓・独栋住宅", at_shop: "店铺", at_office: "办公室", at_parking: "停车位", at_other: "大楼・仓库・其他", at_business_all: "全部商用房产", f_area: "区域", f_station: "沿线·车站", f_price: "价格", f_layout: "户型",
     all: "全部", c_joyo: "城阳市", c_uji: "宇治市", c_kyotanabe: "京田边市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
@@ -619,14 +514,7 @@ const I18N = {
 };
 
 class Component extends DCLogic {
-  state = { tab: "売買", kind: "すべて", sel: null, menu: false, lang: "ja" };
-
-  btn(active, big) {
-    const base = "white-space:nowrap;flex-shrink:0;padding:" + (big ? "9px 22px" : "8px 16px") + ";font-size:13px;letter-spacing:.06em;cursor:pointer;border-radius:2px;";
-    return active
-      ? base + "background:#12395B;color:#fff;border:1px solid #12395B;font-weight:700"
-      : base + "background:#fff;color:#4E5560;border:1px solid #DCD5C9;font-weight:500";
-  }
+  state = { menu: false, lang: "ja" };
 
   /* 言語を切り替える（選択はブラウザに記憶。html の lang とタイトルも更新） */
   setLang(lang) {
@@ -645,63 +533,10 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const zh = this.state.lang === "zh";
-    const L = zh ? I18N.zh : I18N.ja;
-    const unit = zh ? "套" : "件";
-    const loc = p => (zh ? Object.assign({}, p, p.zh) : p);
-    const kl = k => (zh ? KIND_ZH[k] : k);
-
-    const tab = this.state.tab;
-    const dealName = zh ? DEAL_ZH[tab] : tab;
-    const deal = DATA.filter(p => p.deal === tab);
-    const kinds = ["すべて"].concat(deal.map(p => p.kind).filter((k, i, a) => a.indexOf(k) === i));
-    const kind = kinds.indexOf(this.state.kind) >= 0 ? this.state.kind : "すべて";
-    const items = (kind === "すべて" ? deal : deal.filter(p => p.kind === kind))
-      .map(p => Object.assign({}, loc(p), {
-        kind: kl(p.kind),
-        tagStyle: "position:absolute;top:0;right:0;background:#A3803B;color:#fff;font-size:11px;font-weight:700;padding:6px 10px" + (p.tag ? "" : ";display:none"),
-        onClick: () => this.setState({ sel: p })
-      }));
-    const selRaw = this.state.sel;
-    const sel = selRaw ? Object.assign({}, loc(selRaw), { kind: kl(selRaw.kind) }) : null;
+    const L = this.state.lang === "zh" ? I18N.zh : I18N.ja;
     const bar = "display:block;width:20px;height:2px;background:#12395B;border-radius:1px;transition:transform .2s,opacity .2s";
-
-    const groups = [
-      { jp: "売土地", kinds: ["売土地"] },
-      { jp: "売新築一戸建", kinds: ["売新築一戸建"] },
-      { jp: "売中古一戸建", kinds: ["売中古一戸建"] },
-      { jp: "売中古マンション", kinds: ["売中古マンション"] },
-      { jp: "貸マンション・アパート", kinds: ["貸マンション", "貸アパート"] },
-      { jp: "貸戸建・事務所・駐車場", kinds: ["貸戸建", "貸事務所・店舗", "駐車場"] }
-    ];
-    const typeTiles = groups.map(g => ({
-      jp: zh ? GROUP_ZH[g.jp] : g.jp,
-      en: g.jp.indexOf("貸") === 0 ? "FOR RENT" : "FOR SALE",
-      count: DATA.filter(p => g.kinds.indexOf(p.kind) >= 0).length + unit
-    }));
-
-    const total = DATA.filter(p => p.deal === tab).length;
-
     return {
-      L, tab, items,
-      totalLabel: zh ? "共刊登" + total + unit : "掲載 " + total + unit,
-      countLabel: items.length + unit,
-      listingsTitle: zh ? "最新" + dealName + "房源" : "新着の" + tab + "物件",
-      allBtn: zh ? "查看全部" + dealName + "房源（" + items.length + unit + "）" : tab + "物件をすべて見る（" + items.length + unit + "）",
-      tabs: ["売買", "賃貸"].map(t => ({
-        label: zh ? TAB_ZH[t] : t + "を探す",
-        style: this.btn(t === tab, true) + (t === tab ? "" : ";border-color:transparent;background:transparent"),
-        onClick: () => this.setState({ tab: t, kind: "すべて" })
-      })),
-      chips: kinds.map(k => ({
-        label: k === "すべて" ? L.all : kl(k), style: this.btn(k === kind, false),
-        onClick: () => this.setState({ kind: k })
-      })),
-      typeTiles,
-      areas: L.areas,
-      reportCards: L.reportCards,
-      services: L.services,
-      companyRows: L.companyRows,
+      L, reportCards: L.reportCards, services: L.services, companyRows: L.companyRows,
       toggleLang: () => this.setLang(this.state.lang === "zh" ? "ja" : "zh"),
       hasMenu: this.state.menu,
       menuExpanded: this.state.menu ? "true" : "false",
@@ -709,25 +544,11 @@ class Component extends DCLogic {
       bar2: bar + (this.state.menu ? ";opacity:0" : ""),
       bar3: bar + (this.state.menu ? ";transform:translateY(-7px) rotate(-45deg)" : ""),
       toggleMenu: () => this.setState({ menu: !this.state.menu }),
-      closeMenu: () => this.setState({ menu: false }),
-      hasSel: !!sel,
-      sel: sel || {},
-      selRows: sel ? [
-        { k: L.sel_addr, v: sel.address },
-        { k: L.sel_traffic, v: sel.station },
-        { k: L.sel_price, v: sel.price },
-        { k: L.sel_layout, v: sel.layout },
-        { k: L.sel_area, v: sel.area },
-        { k: L.sel_built, v: sel.built },
-        { k: L.sel_deal, v: L.sel_deal_v },
-        { k: L.sel_note_k, v: L.sel_note_v }
-      ] : [],
-      closeSel: () => this.setState({ sel: null }),
-      stop: e => e.stopPropagation(),
-      onCard: p => () => this.setState({ sel: p })
+      closeMenu: () => this.setState({ menu: false })
     };
   }
 }
+
 </script>
 <script src="./athome-frame-resize.js"></script>
 </body>
