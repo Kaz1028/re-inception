@@ -208,6 +208,10 @@
       <p style="color:#7A7468;line-height:1.8;margin:0 0 20px">{{ L.at_intro }}</p>
       <div class="athome-grid athome-primary"><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/baibai/shumoku" target="_blank" rel="noopener">{{ L.at_buy }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/chintai/shumoku" target="_blank" rel="noopener">{{ L.at_rent }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku" target="_blank" rel="noopener">{{ L.at_all }} <span aria-hidden="true">↗</span></a></div>
       <p style="font-size:13px;color:#7A7468;line-height:1.8;margin:16px 0">{{ L.at_note }}</p>
+      <div style="margin:24px 0">
+        <h3 style="font-size:17px;margin:0 0 12px">{{ L.at_keyword }}</h3>
+        <iframe class="athome-widget-frame" src="./athome-search.html" title="アットホーム フリーワード検索" style="display:block;width:100%;height:240px;border:0" loading="lazy"></iframe>
+      </div>
       <details class="athome-details"><summary>{{ L.at_types }}</summary>
 <h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_home_buy }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/mansion/search_setting" target="_blank" rel="noopener">{{ L.at_mansion }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kodate/search_setting" target="_blank" rel="noopener">{{ L.at_house }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tochi/search_setting" target="_blank" rel="noopener">{{ L.at_land }} <span aria-hidden="true">↗</span></a></div>
 <h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_home_rent }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/chintai/search_setting" target="_blank" rel="noopener">{{ L.at_rental_home }} <span aria-hidden="true">↗</span></a></div>
@@ -215,6 +219,16 @@
 <h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_business_buy }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/baibai_jigyo/shumoku" target="_blank" rel="noopener">{{ L.at_business_all }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tempo/search_setting" target="_blank" rel="noopener">{{ L.at_shop }} <span aria-hidden="true">↗</span></a></div>
       </details>
     </div>
+  </section>
+
+  <section id="athome-feature" style="max-width:1144px;margin:56px auto 0;padding:0 24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <div><div style="font-size:11px;letter-spacing:.3em;color:#A3803B">FEATURE</div>
+      <h2 style="font-family:'Zen Old Mincho',serif;font-size:28px;margin:8px 0">{{ L.at_feature }}</h2></div>
+      <a class="athome-link" href="https://asp.athome.jp/074518/tokushu/20261017153337" target="_blank" rel="noopener">{{ L.at_feature_more }} ↗</a>
+    </div>
+    <p style="color:#7A7468;line-height:1.8">{{ L.at_feature_note }}</p>
+    <iframe class="athome-widget-frame" src="./athome-feature.html" title="城陽市の築5年以内の賃貸物件" style="display:block;width:100%;height:440px;border:0" loading="lazy"></iframe>
   </section>
 
   <section id="listings" style="max-width:1200px;margin:0 auto;padding:72px 24px 0">
@@ -468,6 +482,7 @@ const I18N = {
     managed_badge: "管理物件", managed_ph: "管理物件の外観写真",
     spec_layout: "間取り", spec_area: "面積", spec_traffic: "交通", spec_built: "築年／構造",
     search_title: "物件をさがす",
+    at_keyword: "キーワードから探す", at_feature: "城陽の築浅賃貸", at_feature_more: "特集をすべて見る", at_feature_note: "城陽市の築5年以内の賃貸物件をご紹介。最新の募集状況は詳細ページでご確認いただけます。",
     at_buy: "売買を探す", at_rent: "賃貸を探す", at_all: "全物件・リゾートを探す", at_intro: "住まいから店舗・事務所まで、ご希望の物件をお探しいただけます。", at_note: "アットホームの検索画面を別タブで開きます。物件種目を選んだ後、地域・沿線・駅・通勤通学時間・フリーワードで検索できます。", at_types: "物件の種類から探す", at_home_buy: "住まいを買う", at_home_rent: "住まいを借りる", at_business_rent: "事業用物件を借りる", at_business_buy: "事業用物件を買う", at_mansion: "マンション", at_house: "一戸建て", at_land: "土地", at_rental_home: "アパート・マンション・一戸建て", at_shop: "店舗", at_office: "事務所", at_parking: "駐車場", at_other: "ビル・倉庫・その他", at_business_all: "事業用物件すべて", f_area: "エリア", f_station: "沿線・駅", f_price: "価格", f_layout: "間取り",
     all: "すべて", c_joyo: "城陽市", c_uji: "宇治市", c_kyotanabe: "京田辺市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
     s_joyo: "JR奈良線 城陽駅", s_nagaike: "JR奈良線 長池駅", s_terada: "近鉄京都線 寺田駅", s_kutsukawa: "近鉄京都線 久津川駅",
@@ -525,6 +540,7 @@ const I18N = {
     managed_badge: "管理物业", managed_ph: "管理物业外观照片",
     spec_layout: "户型", spec_area: "面积", spec_traffic: "交通", spec_built: "建成年份／结构",
     search_title: "查找房源",
+    at_keyword: "关键词搜索（日语）", at_feature: "城阳市楼龄5年以内的出租房源", at_feature_more: "查看全部专题房源", at_feature_note: "介绍城阳市楼龄5年以内的出租房源。最新招租信息请查看日语详情页面。",
     at_buy: "购买房产", at_rent: "租赁房产", at_all: "全部房源・度假房产", at_intro: "从住宅到店铺、办公室，查找符合您需求的房产。", at_note: "将在新标签页打开 at home 的日语搜索页面。选择房产类型后，可按地区、沿线车站、通勤时间或关键词搜索。", at_types: "按房产类型查找", at_home_buy: "购买住宅", at_home_rent: "租赁住宅", at_business_rent: "租赁商用房产", at_business_buy: "购买商用房产", at_mansion: "公寓", at_house: "独栋住宅", at_land: "土地", at_rental_home: "公寓・独栋住宅", at_shop: "店铺", at_office: "办公室", at_parking: "停车位", at_other: "大楼・仓库・其他", at_business_all: "全部商用房产", f_area: "区域", f_station: "沿线·车站", f_price: "价格", f_layout: "户型",
     all: "全部", c_joyo: "城阳市", c_uji: "宇治市", c_kyotanabe: "京田边市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
     s_joyo: "JR奈良线 城阳站", s_nagaike: "JR奈良线 长池站", s_terada: "近铁京都线 寺田站", s_kutsukawa: "近铁京都线 久津川站",
@@ -685,5 +701,6 @@ class Component extends DCLogic {
   }
 }
 </script>
+<script src="./athome-frame-resize.js"></script>
 </body>
 </html>
