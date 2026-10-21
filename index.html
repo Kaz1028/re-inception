@@ -14,6 +14,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
 <style>
+  .athome-search { max-width:1144px;margin:0 auto;background:#fff;border:1px solid #E6E0D6;box-shadow:0 12px 40px rgba(27,34,43,.07);padding:28px; }
+  .athome-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px; }
+  .athome-link { display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #DCD5C9;padding:16px;color:#12395B;background:#FCFBF9;border-radius:2px;font-weight:700; }
+  .athome-link:hover { background:#F1ECE4; }
+  .athome-link:focus-visible,.athome-details summary:focus-visible { outline:3px solid #A3803B;outline-offset:3px; }
+  .athome-primary .athome-link { background:#12395B;color:#fff;border-color:#12395B; }
+  .athome-primary .athome-link:hover { background:#0C2A44; }
+  .athome-details { border-top:1px solid #E6E0D6;padding-top:18px; }
+  .athome-details summary { cursor:pointer;font-weight:700; }
+  @media(max-width:480px) { .athome-search { padding:20px 16px; } .athome-grid { grid-template-columns:1fr; } }
+
   body { margin:0; background:#FAF8F4; -webkit-font-smoothing:antialiased; }
   html { scroll-padding-top:24px; }
   a { color:#12395B; text-decoration:none; }
@@ -180,41 +191,17 @@
   </section>
 
   <section id="search" style="padding:72px 24px 0">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="position:relative;background:#fff;border:1px solid #E6E0D6;box-shadow:0 12px 40px rgba(27,34,43,.07);padding:26px 28px 28px">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap">
-          <span style="font-family:'Zen Old Mincho',serif;font-size:17px;font-weight:700">{{ L.search_title }}</span>
-          <div style="display:flex;gap:2px;background:#F1ECE4;padding:3px">
-            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="2">
-              <button onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
-            </sc-for>
-          </div>
-          <span style="margin-left:auto;font-size:12px;color:#7A7468">{{ totalLabel }}</span>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:end">
-          <label style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;color:#7A7468">{{ L.f_area }}
-            <select style="padding:11px 10px;border:1px solid #DCD5C9;background:#FCFBF9;font-size:14px;color:#1B222B;border-radius:2px">
-              <option>{{ L.all }}</option><option>{{ L.c_joyo }}</option><option>{{ L.c_uji }}</option><option>{{ L.c_kyotanabe }}</option><option>{{ L.c_kizugawa }}</option><option>{{ L.c_kumiyama }}</option>
-            </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;color:#7A7468">{{ L.f_station }}
-            <select style="padding:11px 10px;border:1px solid #DCD5C9;background:#FCFBF9;font-size:14px;color:#1B222B;border-radius:2px">
-              <option>{{ L.all }}</option><option>{{ L.s_joyo }}</option><option>{{ L.s_nagaike }}</option><option>{{ L.s_terada }}</option><option>{{ L.s_kutsukawa }}</option>
-            </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;color:#7A7468">{{ L.f_price }}
-            <select style="padding:11px 10px;border:1px solid #DCD5C9;background:#FCFBF9;font-size:14px;color:#1B222B;border-radius:2px">
-              <option>{{ L.p_any }}</option><option>{{ L.p1 }}</option><option>{{ L.p2 }}</option><option>{{ L.p3 }}</option><option>{{ L.p4 }}</option>
-            </select>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.1em;color:#7A7468">{{ L.f_layout }}
-            <select style="padding:11px 10px;border:1px solid #DCD5C9;background:#FCFBF9;font-size:14px;color:#1B222B;border-radius:2px">
-              <option>{{ L.l_any }}</option><option>{{ L.l1 }}</option><option>{{ L.l2 }}</option><option>{{ L.l3 }}</option><option>{{ L.l4 }}</option>
-            </select>
-          </label>
-          <a href="#listings" style="background:#12395B;color:#fff;text-align:center;padding:13px 20px;font-size:14px;font-weight:700;letter-spacing:.08em;border-radius:2px" style-hover="background:#0C2A44">{{ L.search_btn }}</a>
-        </div>
-      </div>
+    <div class="athome-search">
+      <h2 style="font-family:'Zen Old Mincho',serif;font-size:24px;margin:0 0 12px">{{ L.search_title }}</h2>
+      <p style="color:#7A7468;line-height:1.8;margin:0 0 20px">{{ L.at_intro }}</p>
+      <div class="athome-grid athome-primary"><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/baibai/shumoku" target="_blank" rel="noopener">{{ L.at_buy }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/chintai/shumoku" target="_blank" rel="noopener">{{ L.at_rent }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku" target="_blank" rel="noopener">{{ L.at_all }} <span aria-hidden="true">↗</span></a></div>
+      <p style="font-size:13px;color:#7A7468;line-height:1.8;margin:16px 0">{{ L.at_note }}</p>
+      <details class="athome-details"><summary>{{ L.at_types }}</summary>
+<h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_home_buy }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/mansion/search_setting" target="_blank" rel="noopener">{{ L.at_mansion }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kodate/search_setting" target="_blank" rel="noopener">{{ L.at_house }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tochi/search_setting" target="_blank" rel="noopener">{{ L.at_land }} <span aria-hidden="true">↗</span></a></div>
+<h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_home_rent }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/chintai/search_setting" target="_blank" rel="noopener">{{ L.at_rental_home }} <span aria-hidden="true">↗</span></a></div>
+<h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_business_rent }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kashi_tempo/search_setting" target="_blank" rel="noopener">{{ L.at_shop }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kashi_office/search_setting" target="_blank" rel="noopener">{{ L.at_office }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/parking/search_setting" target="_blank" rel="noopener">{{ L.at_parking }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kashi_tochi/search_setting" target="_blank" rel="noopener">{{ L.at_land }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/kashi_other/search_setting" target="_blank" rel="noopener">{{ L.at_other }} <span aria-hidden="true">↗</span></a></div>
+<h3 style="font-size:15px;margin:20px 0 10px">{{ L.at_business_buy }}</h3><div class="athome-grid"><a class="athome-link" href="https://asp.athome.jp/074518/shubetsu/baibai_jigyo/shumoku" target="_blank" rel="noopener">{{ L.at_business_all }} <span aria-hidden="true">↗</span></a><a class="athome-link" href="https://asp.athome.jp/074518/shumoku/uri_tempo/search_setting" target="_blank" rel="noopener">{{ L.at_shop }} <span aria-hidden="true">↗</span></a></div>
+      </details>
     </div>
   </section>
 
@@ -468,7 +455,8 @@ const I18N = {
     trust1: "城陽市役所の窓口封筒に広告を掲載中", trust2: "京都府知事免許（１）第１４９００号", trust3: "(公社)京都府宅地建物取引業協会会員",
     managed_badge: "管理物件", managed_ph: "管理物件の外観写真",
     spec_layout: "間取り", spec_area: "面積", spec_traffic: "交通", spec_built: "築年／構造",
-    search_title: "物件をさがす", f_area: "エリア", f_station: "沿線・駅", f_price: "価格", f_layout: "間取り",
+    search_title: "物件をさがす",
+    at_buy: "売買を探す", at_rent: "賃貸を探す", at_all: "全物件・リゾートを探す", at_intro: "住まいから店舗・事務所まで、ご希望の物件をお探しいただけます。", at_note: "アットホームの検索画面を別タブで開きます。物件種目を選んだ後、地域・沿線・駅・通勤通学時間・フリーワードで検索できます。", at_types: "物件の種類から探す", at_home_buy: "住まいを買う", at_home_rent: "住まいを借りる", at_business_rent: "事業用物件を借りる", at_business_buy: "事業用物件を買う", at_mansion: "マンション", at_house: "一戸建て", at_land: "土地", at_rental_home: "アパート・マンション・一戸建て", at_shop: "店舗", at_office: "事務所", at_parking: "駐車場", at_other: "ビル・倉庫・その他", at_business_all: "事業用物件すべて", f_area: "エリア", f_station: "沿線・駅", f_price: "価格", f_layout: "間取り",
     all: "すべて", c_joyo: "城陽市", c_uji: "宇治市", c_kyotanabe: "京田辺市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
     s_joyo: "JR奈良線 城陽駅", s_nagaike: "JR奈良線 長池駅", s_terada: "近鉄京都線 寺田駅", s_kutsukawa: "近鉄京都線 久津川駅",
     p_any: "指定なし", p1: "〜1,500万円", p2: "1,500〜2,500万円", p3: "2,500〜3,500万円", p4: "3,500万円〜",
@@ -524,7 +512,8 @@ const I18N = {
     trust1: "广告刊登于城阳市政府窗口信封", trust2: "京都府知事许可（1）第14900号", trust3: "京都府宅地建物交易业协会会员",
     managed_badge: "管理物业", managed_ph: "管理物业外观照片",
     spec_layout: "户型", spec_area: "面积", spec_traffic: "交通", spec_built: "建成年份／结构",
-    search_title: "查找房源", f_area: "区域", f_station: "沿线·车站", f_price: "价格", f_layout: "户型",
+    search_title: "查找房源",
+    at_buy: "购买房产", at_rent: "租赁房产", at_all: "全部房源・度假房产", at_intro: "从住宅到店铺、办公室，查找符合您需求的房产。", at_note: "将在新标签页打开 at home 的日语搜索页面。选择房产类型后，可按地区、沿线车站、通勤时间或关键词搜索。", at_types: "按房产类型查找", at_home_buy: "购买住宅", at_home_rent: "租赁住宅", at_business_rent: "租赁商用房产", at_business_buy: "购买商用房产", at_mansion: "公寓", at_house: "独栋住宅", at_land: "土地", at_rental_home: "公寓・独栋住宅", at_shop: "店铺", at_office: "办公室", at_parking: "停车位", at_other: "大楼・仓库・其他", at_business_all: "全部商用房产", f_area: "区域", f_station: "沿线·车站", f_price: "价格", f_layout: "户型",
     all: "全部", c_joyo: "城阳市", c_uji: "宇治市", c_kyotanabe: "京田边市", c_kizugawa: "木津川市", c_kumiyama: "久御山町",
     s_joyo: "JR奈良线 城阳站", s_nagaike: "JR奈良线 长池站", s_terada: "近铁京都线 寺田站", s_kutsukawa: "近铁京都线 久津川站",
     p_any: "不限", p1: "1,500万日元以下", p2: "1,500〜2,500万日元", p3: "2,500〜3,500万日元", p4: "3,500万日元以上",
