@@ -1,0 +1,24 @@
+name: Area report checks
+on:
+  push:
+    paths: ['area-report/**', '.github/workflows/area-report.yml']
+  pull_request:
+    paths: ['area-report/**', '.github/workflows/area-report.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: area-report
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: area-report/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: node --check server.mjs
