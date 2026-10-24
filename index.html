@@ -2,9 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>INCEPTION｜関西の不動産</title>
+<title>城陽市の不動産・賃貸管理・売却相談｜INCEPTION</title>
+<meta name="description" content="京都府城陽市の株式会社INCEPTION。城陽市・宇治市・京田辺市を中心に、賃貸管理、空き家の活用、不動産売却、賃貸・売買の住まい探しをご相談いただけます。入居者募集から管理、売却まで、物件の状況に合わせてご提案します。">
+<link rel="canonical" href="https://re-inception.com/">
+<meta property="og:title" content="城陽市の不動産・賃貸管理・売却相談｜INCEPTION">
+<meta property="og:description" content="京都府城陽市の株式会社INCEPTION。城陽市・宇治市・京田辺市を中心に、賃貸管理、空き家の活用、不動産売却、賃貸・売買の住まい探しをご相談いただけます。入居者募集から管理、売却まで、物件の状況に合わせてご提案します。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://re-inception.com/">
+<meta property="og:image" content="https://re-inception.com/images/hero-kansai.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script defer src="analytics.js" data-measurement-id=""></script>
 </head>
 <body>
 <x-dc>
@@ -100,7 +108,7 @@
       </a>
       <nav class="hdr-nav" style="display:flex;gap:20px;margin-left:auto;font-size:13.5px;font-weight:500;flex-wrap:wrap;white-space:nowrap;min-width:0;overflow:hidden">
         <a href="#services" style="color:#1B222B">{{ L.nav_services }}</a>
-        <a href="#managed" style="color:#1B222B">{{ L.nav_managed }}</a>
+        <a href="#owners" style="color:#1B222B">{{ L.nav_owners }}</a>
         <a href="#listings" style="color:#1B222B">{{ L.nav_listings }}</a>
         <a href="#search" style="color:#1B222B">{{ L.nav_kinds }}</a>
         <a href="#report" style="color:#1B222B">{{ L.nav_report }}</a>
@@ -124,7 +132,7 @@
       <div class="mobile-menu" style="position:absolute;left:0;right:0;top:100%;background:#FAF8F4;border-bottom:1px solid #E6E0D6;box-shadow:0 14px 30px rgba(27,34,43,.12)">
         <nav style="display:flex;flex-direction:column;padding:4px 16px 0">
           <a href="#services" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_services }}</a>
-          <a href="#managed" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_managed }}</a>
+          <a href="#owners" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_owners }}</a>
           <a href="#listings" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_listings }}</a>
           <a href="#search" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_kinds }}</a>
           <a href="#report" onClick="{{ closeMenu }}" style="padding:15px 4px;border-bottom:1px solid #E6E0D6;color:#1B222B;font-size:15px;font-weight:500">{{ L.nav_report }}</a>
@@ -170,6 +178,17 @@
           <span style="font-size:13.5px;color:#4E5560;line-height:1.85">{{ s.d }}</span>
         </a>
       </sc-for>
+    </div>
+  </section>
+
+  <section id="owners" style="max-width:1200px;margin:0 auto;padding:64px 24px 0">
+    <div style="font-size:11px;letter-spacing:.3em;color:#A3803B">FOR OWNERS</div>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-size:32px;margin:6px 0 12px">{{ L.owner_title }}</h2>
+    <p style="color:#4E5560;margin:0 0 24px">{{ L.owner_lead }}</p>
+    <div class="athome-grid">
+      <a class="athome-link" href="management.html">{{ L.owner_management }} <span aria-hidden="true">→</span></a>
+      <a class="athome-link" href="vacant-house.html">{{ L.owner_vacant }} <span aria-hidden="true">→</span></a>
+      <a class="athome-link" href="sell.html">{{ L.owner_sale }} <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -377,7 +396,7 @@
 const I18N = {
   ja: {
     title: "INCEPTION｜関西の不動産",
-    tagline: "関西の不動産", nav_services: "事業内容", nav_managed: "管理物件例", nav_listings: "物件情報", nav_kinds: "種別で探す", nav_report: "エリアレポート", nav_about: "会社紹介",
+    nav_owners: "オーナー様へ", owner_title: "不動産をお持ちの方へ", owner_lead: "管理を任せたい、空き家を活用したい、売却を検討したい。今の状況からご相談ください。", owner_management: "賃貸管理", owner_vacant: "空き家のご相談", owner_sale: "不動産売却", tagline: "城陽市の不動産", nav_services: "事業内容", nav_managed: "管理物件例", nav_listings: "物件情報", nav_kinds: "種別で探す", nav_report: "エリアレポート", nav_about: "会社紹介",
     hdr_hours: "8:00〜20:00／年末年始休", contact: "お問い合わせ", menu: "メニュー", lang_btn: "中文", lang_aria: "中文に切り替え",
     hero_alt: "京都・大阪を望む関西の街並み", h1a: "関西の物件を、", h1b: "不動産のプロと一緒に。",
     hero_p1: "売買・賃貸の最新物件情報を掲載中。周辺施設・ハザード・相場まで、", hero_p2: "お伝えすべきことは全てお伝えします。",
@@ -437,7 +456,7 @@ const I18N = {
   },
   zh: {
     title: "INCEPTION｜关西房地产",
-    tagline: "关西地区房地产", nav_services: "业务内容", nav_managed: "管理物业示例", nav_listings: "房源信息", nav_kinds: "按类型查找", nav_report: "区域报告", nav_about: "公司介绍",
+    nav_owners: "业主咨询", owner_title: "致房产业主", owner_lead: "出租管理、空置房屋利用或出售，请告诉我们您的情况。", owner_management: "出租管理", owner_vacant: "空置房屋咨询", owner_sale: "房产出售", tagline: "城阳市房地产", nav_services: "业务内容", nav_managed: "管理物业示例", nav_listings: "房源信息", nav_kinds: "按类型查找", nav_report: "区域报告", nav_about: "公司介绍",
     hdr_hours: "8:00〜20:00／年末年初休息", contact: "联系我们", menu: "菜单", lang_btn: "日本語", lang_aria: "切换为日语",
     hero_alt: "远眺京都·大阪的关西街景", h1a: "关西的房产，", h1b: "与房地产专家同行。",
     hero_p1: "持续发布买卖与租赁的最新房源信息。周边设施、灾害风险、市场行情，", hero_p2: "该告知的信息，我们都会如实告知。",
