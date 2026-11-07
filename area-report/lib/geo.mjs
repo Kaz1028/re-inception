@@ -1,0 +1,5 @@
+export function distance(a,b){const r=Math.PI/180;const dlat=(b.lat-a.lat)*r,dlon=(b.lon-a.lon)*r;const h=Math.sin(dlat/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dlon/2)**2;return 6371008.8*2*Math.atan2(Math.sqrt(h),Math.sqrt(Math.max(0,1-h)));}
+export function tileFor(lat,lon,z=14){const n=2**z,r=lat*Math.PI/180;return {z,x:Math.floor((lon+180)/360*n),y:Math.floor((1-Math.asinh(Math.tan(r))/Math.PI)/2*n)};}
+function inRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
+export function contains(geometry,point){if(!geometry)return false;const poly=r=>inRing(point,r[0])&&!r.slice(1).some(h=>inRing(point,h));return geometry.type==='Polygon'?poly(geometry.coordinates):geometry.type==='MultiPolygon'?geometry.coordinates.some(poly):false;}
+export function validPoint(p){return p&&Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&p.lat>=20&&p.lat<=46&&p.lon>=122&&p.lon<=154;}
